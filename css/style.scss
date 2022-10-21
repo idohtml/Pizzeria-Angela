@@ -183,7 +183,7 @@ body {
 main {
   display: flex;
   min-height: 80vh;
-  margin: auto auto;
+  margin: auto;
 }
 
 .grid {
@@ -243,15 +243,10 @@ main {
 }
 
 @media only screen and (max-width: 60em) {
-  body {
-    padding: 3rem;
-  }
-
   .grid {
     grid-gap: 3rem;
   }
 }
-
 
 
 // FOOTER CONTENT
