@@ -32,7 +32,7 @@ body {
     url(../img/Pizza1.jpg);
   background-size: cover;
   background-position: top;
-//   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  //   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .logo-box {
@@ -180,9 +180,9 @@ body {
 }
 
 // MAIN CONTENT
-main {
+.main {
   display: flex;
-  min-height: 80vh;
+  min-height: 100%;
   margin: auto;
 }
 
@@ -190,7 +190,7 @@ main {
   top: 100px;
   padding: 50px;
   display: grid;
-  width: 114em;
+  width: 120em;
   grid-gap: 6rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: center;
@@ -247,7 +247,6 @@ main {
     grid-gap: 3rem;
   }
 }
-
 
 // FOOTER CONTENT
 .container {
@@ -322,9 +321,42 @@ ul {
 }
 
 /*responsive*/
+@media (max-width: 1024px) {
+  .footer-col {
+    width: 100%;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+  }
+
+  .grid-item {
+    width: fit-content;
+  }
+
+  .btn-black:link {
+    display: flex;
+  }
+
+  .card-content h1 {
+    font-size: 2em;
+  }
+
+  .card-content p {
+    font-size: 1.2em;
+  }
+
+  .card-content {
+    padding: 1em;
+    height: fit-content;
+  }
+}
 @media (max-width: 767px) {
   .footer-col {
-    width: 50%;
+    width: 100%;
     margin-bottom: 30px;
   }
 }
