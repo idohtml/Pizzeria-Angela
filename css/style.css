@@ -6,6 +6,12 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+:root {
+  --light-green: #7ed56f
+  --Medium-green: #55c57a
+  --Dark-green: #28b485 ;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,19 +29,19 @@ body {
 .header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(55, 55, 55, 0.3), rgba(0, 0, 0, 0.8)), url(../img/Pizza1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(55, 55, 55, 0.3), rgba(0, 0, 0, 0.8)), url(../images/Pizza1.jpg);
   background-size: cover;
   background-position: top;
 }
 
 .logo-box {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 40px;
 }
 
 .logo {
-  height: 100px;
+  height: 80px;
   filter: drop-shadow(2px 2px 5px #222);
 }
 
@@ -284,7 +290,7 @@ body {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 ul {
@@ -357,8 +363,13 @@ ul {
   color: #fff;
 }
 
+.open-hours {
+  padding: 0.2;
+  line-height: 15px;
+}
+
 /*responsive*/
-@media (max-width: 1024px) {
+@media (max-width: 1230px) {
   .footer-col {
     width: 100%;
   }
@@ -372,6 +383,9 @@ ul {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .row {
+    flex-wrap: wrap;
   }
   .btn-black:link {
     display: flex;
@@ -388,6 +402,12 @@ ul {
     height: -moz-fit-content;
     height: fit-content;
   }
+  .logo-box {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 @media (max-width: 767px) {
   .footer-col {
@@ -398,5 +418,63 @@ ul {
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #7ed56f;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
   }
 }/*# sourceMappingURL=style.css.map */
