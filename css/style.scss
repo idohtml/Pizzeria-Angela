@@ -8,9 +8,9 @@ Dark green: #28b485
 */
 
 :root {
-  --light-green: #7ed56f
-  --Medium-green: #55c57a
-  --Dark-green: #28b485
+  --light-green: #7ed56f;
+  --Medium-green: #55c57a;
+  --Dark-green: #28b485;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
       rgba(55, 55, 55, 0.3),
       rgba(0, 0, 0, 0.8)
     ),
-    url(../images/Pizza1.jpg);
+    url(../images/pizza1.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -53,10 +53,11 @@ body {
 
 .text-box {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  justify-content: center;
 }
 
 .heading-primary {
@@ -84,6 +85,22 @@ body {
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: linear;
+}
+
+@media screen and (max-width: 40rem) {
+  .heading-primary-main,
+  .heading-primary-sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.5rem;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  .menu-group-heading-span i {
+    font-size: 12px;
+  }
 }
 
 @keyframes moveInLeft {
@@ -365,6 +382,10 @@ ul {
     height: fit-content;
   }
 
+  .logo {
+    height: 60px;
+  }
+
   .logo-box {
     position: absolute;
     top: 10%;
@@ -398,9 +419,18 @@ ul {
 }
 
 .menu-group-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding-bottom: 1em;
   border-bottom: 2px solid #7ed56f;
+}
+
+.menu-group-heading-span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #999;
 }
 
 .menu-group {
