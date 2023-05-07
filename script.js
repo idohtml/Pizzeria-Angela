@@ -1,16 +1,30 @@
+let element = document.getElementById("menu");
+let element2 = document.getElementById("btnScroll");
+
+element.addEventListener("click", navigateTo, true);
+
+function navigateTo(event) {
+  event.preventDefault();
+  element2.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+}
+
 // Group elements
-const G1 = document.getElementById("grupp1");
-const G2 = document.getElementById("grupp2");
-const G3 = document.getElementById("grupp3");
-const G4 = document.getElementById("grupp4");
-const G5 = document.getElementById("grupp5");
+const GroupOne = document.getElementById("grupp1");
+const GroupTwo = document.getElementById("grupp2");
+const GroupThree = document.getElementById("grupp3");
+const GroupFour = document.getElementById("grupp4");
+const GroupFive = document.getElementById("grupp5");
 
 // Set values
-G1.innerHTML = "110kr";
-G2.innerHTML = "120kr";
-G3.innerHTML = "125kr";
-G4.innerHTML = "130kr";
-G5.innerHTML = "145kr";
+GroupOne.innerHTML = "110kr";
+GroupTwo.innerHTML = "120kr";
+GroupThree.innerHTML = "125kr";
+GroupFour.innerHTML = "130kr";
+GroupFive.innerHTML = "145kr";
 
 // Kebab - Kyckling - Gyros - Falafel menu
 const kebabPrice = document.getElementById("KebabMedBröd");
@@ -50,7 +64,7 @@ const lasagne = document.getElementById("Lasagne");
 const bolognese = document.getElementById("Bolognese");
 const nintyG = document.getElementById("90g");
 const hundredfiftyG = document.getElementById("150g");
-const paellaKyckling = document.getAnimations("PaellaKyckling");
+const paellaKyckling = document.getElementById("PaellaKyckling");
 const paellaKebab = document.getElementById("PaellaKebab");
 const paellaMix = document.getElementById("PaellaMix");
 
