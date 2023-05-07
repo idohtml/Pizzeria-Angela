@@ -29,7 +29,12 @@ body {
 .header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(55, 55, 55, 0.3), rgba(0, 0, 0, 0.8)), url(../images/pizza1.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(55, 55, 55, 0.3),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../pizza1.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -58,7 +63,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   margin-bottom: 60px;
 }
 
@@ -68,11 +73,11 @@ body {
   font-weight: 400;
   letter-spacing: 35px;
   -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
+  animation-name: moveInLeft;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 .heading-primary-sub {
@@ -81,16 +86,16 @@ body {
   font-weight: 700;
   letter-spacing: 18px;
   -webkit-animation-name: moveInRight;
-          animation-name: moveInRight;
+  animation-name: moveInRight;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @media screen and (max-width: 40rem) {
   .heading-primary-main,
-.heading-primary-sub {
+  .heading-primary-sub {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,9 +229,9 @@ body {
 
 .btn-animated {
   -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-          animation: moveInBottom 0.5s ease-out 0.75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
 }
 
 .main {
@@ -264,7 +269,7 @@ body {
   width: 100%;
   height: 20rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .card-content {
@@ -324,7 +329,6 @@ ul {
 .footer-col h4 {
   font-size: 18px;
   color: #ffffff;
-  text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
   position: relative;
@@ -347,7 +351,6 @@ ul {
 
 .footer-col ul li a {
   font-size: 16px;
-  text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
@@ -450,6 +453,7 @@ ul {
 
 .menu-group-heading {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 0;
@@ -503,4 +507,4 @@ ul {
     width: 125px;
     height: 125px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
