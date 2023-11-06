@@ -13,7 +13,7 @@ function navigateTo(event) {
 }
 
 const menuItems = {
-  groupOne: [
+  groups: [
     { id: "grupp1", price: "110kr" },
     { id: "grupp2", price: "120kr" },
     { id: "grupp3", price: "125kr" },
@@ -51,7 +51,7 @@ const menuItems = {
     { id: "PaellaMix", price: "125kr" },
   ],
   saladsMenu: [
-    { id: "Sallader", price: "115kr (Gyrossallad och Kycklingkebab +10kr)" },
+    { id: "Sallader", price: "115kr " },
     { id: "KycklingSpecial", price: "129kr" },
     { id: "NaddasSpecial", price: "129kr" },
     { id: "Barnmeny", price: "89kr" },

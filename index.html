@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
     <script
       src="https://kit.fontawesome.com/67383b8b33.js"
       crossorigin="anonymous"
@@ -18,7 +15,7 @@
   <body>
     <header class="header">
       <div class="logo-box">
-        <img class="logo" src="logo4.png " alt="logo" />
+        <img class="logo" src="logo4.png" alt="logo" />
       </div>
       <div class="text-box">
         <h1 class="heading-primary">
@@ -30,19 +27,20 @@
     </header>
     <main>
       <div class="container">
-        <div class="menu">
+        <section class="menu">
           <h2 class="menu-group-heading">
             <span>Vid allergier fråga personalen</span>
           </h2>
-        </div>
-        <div class="menu">
+          <p class="menu-group-description"></p>
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="G1">
             <span>Grupp 1</span>
             <span id="grupp1"></span>
-            <span class="menu-group-heading-span"
-              ><i>Tomatsås & ost ingår i alla pizzor</i></span
-            >
           </h2>
+          <p class="menu-group-description">
+            Tomatsås &amp; ost ingår i alla pizzor
+          </p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -172,15 +170,15 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="btnScroll">
             <span> Grupp 2</span>
             <span id="grupp2"></span>
-            <span class="menu-group-heading-span"
-              ><i>Tomatsås & ost ingår i alla pizzor</i></span
-            >
           </h2>
+          <p class="menu-group-description">
+            Tomatsås &amp; ost ingår i alla pizzor
+          </p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -299,15 +297,15 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="G3">
             <span>Grupp 3</span>
             <span id="grupp3"></span>
-            <span class="menu-group-heading-span"
-              ><i>Tomatsås & ost ingår i alla pizzor</i></span
-            >
           </h2>
+          <p class="menu-group-description">
+            Tomatsås &amp; ost ingår i alla pizzor
+          </p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -429,15 +427,15 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="G4">
             <span>Grupp 4</span>
             <span id="grupp4"></span>
-            <span class="menu-group-heading-span"
-              ><i>Tomatsås & ost ingår i alla pizzor</i></span
-            >
           </h2>
+          <p class="menu-group-description">
+            Tomatsås &amp; ost ingår i alla pizzor
+          </p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -529,20 +527,20 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="G5">
             <span>Grupp 5</span>
             <span id="grupp5" class="grupp5"></span>
-            <span class="menu-group-heading-span"
-              ><i>Tomatsås & ost ingår i alla pizzor</i></span
-            >
           </h2>
+          <p class="menu-group-description">
+            Tomatsås &amp; ost ingår i alla pizzor
+          </p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
                 <h3 class="menu-item-heading">
-                  <span class="menu-item-name">Black & White</span>
+                  <span class="menu-item-name">Black &amp;amp; White</span>
                   <span class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
@@ -664,34 +662,13 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="menu-item">
-              <div class="menu-item-text">
-                <h3 class="menu-item-heading">
-                  <span class="menu-item-name">Carbonarapizza 1</span>
-                  <span class="menu-item-price"></span>
-                </h3>
-                <p class="menu-item-description">
-                  Carbonara sås, ost, skinka, champinjoner
-                </p>
-              </div>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item-text">
-                <h3 class="menu-item-heading">
-                  <span class="menu-item-name">Carbonarapizza 2</span>
-                  <span class="menu-item-price"></span>
-                </h3>
-                <p class="menu-item-description">
-                  Carbonara sås, ost, bacon, champinjoner
-                </p>
-              </div>
-            </div> -->
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="kebab">
             Kebab - Kyckling - Gyros - Falafel
           </h2>
+          <p class="menu-group-description"></p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -819,9 +796,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="LAC">À La Carte</h2>
+          <p class="menu-group-description"></p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -830,7 +808,7 @@
                   <span id="Lövstek" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Stekpotatis/pommes & aromsmör
+                  Stekpotatis/pommes &amp; aromsmör
                 </p>
               </div>
             </div>
@@ -841,7 +819,7 @@
                   <span id="Schnitzel" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Stekpotatis/pommes & aromsmör
+                  Stekpotatis/pommes &amp; aromsmör
                 </p>
               </div>
             </div>
@@ -852,7 +830,7 @@
                   <span id="Pannbiff" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Stekpotatis, brunsås & lingonsylt
+                  Stekpotatis, brunsås &amp; lingonsylt
                 </p>
               </div>
             </div>
@@ -863,7 +841,7 @@
                   <span id="Rödspätta" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Stekpotatis/pommes & remouladsås
+                  Stekpotatis/pommes &amp; remouladsås
                 </p>
               </div>
             </div>
@@ -874,7 +852,7 @@
                   <span id="Kycklingfilé" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Pommes/klyftpotatis/ris & bearnaisesås
+                  Pommes/klyftpotatis/ris &amp; bearnaisesås
                 </p>
               </div>
             </div>
@@ -885,7 +863,7 @@
                   <span id="Fläskfilé" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Pommes/klyftpotatis/ris & bearnaisesås
+                  Pommes/klyftpotatis/ris &amp; bearnaisesås
                 </p>
               </div>
             </div>
@@ -896,7 +874,7 @@
                   <span id="Kycklingspett" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Pommes/klyftpotatis/ris & tzatziki
+                  Pommes/klyftpotatis/ris &amp; tzatziki
                 </p>
               </div>
             </div>
@@ -906,7 +884,7 @@
                   <span class="menu-item-name">Pyttipanna</span>
                   <span id="Pyttipanna" class="menu-item-price"></span>
                 </h3>
-                <p class="menu-item-description">Stekt ägg & rödbetor</p>
+                <p class="menu-item-description">Stekt ägg &amp; rödbetor</p>
               </div>
             </div>
             <div class="menu-item">
@@ -916,7 +894,7 @@
                   <span id="Raggmunk" class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">
-                  Stekt fläsk & lingonsylt (Hemlagad)
+                  Stekt fläsk &amp; lingonsylt (Hemlagad)
                 </p>
               </div>
             </div>
@@ -990,21 +968,24 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="LAC">
             <span>Sallader</span>
             <span id="Sallader"></span>
-            <span class="menu-group-heading-span"
-              >Isbergssallad, tomat & gurka samt valfri dressing ingår till
+          </h2>
+          <p class="menu-group-description">
+            (Gyrossallad och Kycklingkebab +10kr)
+            <span
+              >Isbergssallad, tomat &amp; gurka samt valfri dressing ingår till
               samtliga sallader</span
             >
-          </h2>
+          </p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
                 <h3 class="menu-item-heading">
-                  <span class="menu-item-name">Ost & skinksallad</span>
+                  <span class="menu-item-name">Ost &amp; skinksallad</span>
                   <span class="menu-item-price"></span>
                 </h3>
                 <p class="menu-item-description">Ost, skinka, ananas, majs</p>
@@ -1084,11 +1065,12 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="LAC">
             <span>Sallader special</span>
           </h2>
+          <p class="menu-group-description"></p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -1114,15 +1096,13 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="menu">
+        </section>
+        <section class="menu">
           <h2 class="menu-group-heading" id="LAC">
             <span>Barnmeny</span>
             <span id="Barnmeny"></span>
-            <span class="menu-group-heading-span"
-              ><i>Ingår tetra dryck</i></span
-            >
           </h2>
+          <p class="menu-group-description">Ingår tetra dryck</p>
           <div class="menu-group">
             <div class="menu-item">
               <div class="menu-item-text">
@@ -1155,7 +1135,7 @@
               <div class="menu-item-text">
                 <h3 class="menu-item-heading">
                   <span class="menu-item-name"
-                    >Köttbullar med lingon & mos</span
+                    >Köttbullar med lingon &amp; mos</span
                   >
                   <span class="menu-item-price"></span>
                 </h3>
@@ -1172,14 +1152,14 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="row">
+        <div class="footer-row">
           <div class="footer-col">
-            <h4>Var befinner vi oss?</h4>
+            <h2>Var befinner vi oss?</h2>
             <ul>
               <li><a>Leverstorpsvägen 2</a></li>
               <li><a>612 44 Finspång</a></li>
@@ -1203,14 +1183,14 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Öppettider</h4>
+            <h2>Öppettider</h2>
             <ul class="open-hours">
               <li><a>Mån-Fre: 11-21</a></li>
               <li><a>Lör-Sön: 12-21</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Följ oss på sociala medier</h4>
+            <h2>Följ oss på sociala medier</h2>
             <div class="social-links">
               <a
                 href="https://www.facebook.com/pizzeriaangelafinspang"
@@ -1223,10 +1203,10 @@
             <img
               src="logo4.png"
               width="200px"
-              alt="Pizzeria & Restaurang Angela"
+              alt="Pizzeria &amp; Restaurang Angela"
             />
             <p>
-              <span>&copy; 2023 All rights reserved</span>
+              <span>&amp;copy; 2023 All rights reserved</span>
               <br />
               <span>By: Sevak Yousef</span>
             </p>
@@ -1234,6 +1214,5 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
