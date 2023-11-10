@@ -1,0 +1,149 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../public/images/logo.png";
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h2>Var befinner vi oss?</h2>
+        <ul>
+          <li><a>Leverstorpsvägen 2</a></li>
+          <li><a>612 44 Finspång</a></li>
+          <li>
+            <a>Telefon: <strong> 0122 - 173 71</strong></a>
+          </li>
+          <li>
+            <a href="https://goo.gl/maps/P5ahZJcGbS2boC4U9" target="_blank"
+              >Hitta oss via Google Maps</a
+            >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2072.664220336663!2d15.8068143!3d58.702061300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46594f9bd487d00b%3A0x2a72279df9da9137!2sPizzeria%20%26%20Restaurang%20Angela!5e0!3m2!1ssv!2sse!4v1670877240617!5m2!1ssv!2sse"
+              width="300"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Öppettider</h2>
+        <ul class="open-hours">
+          <li><a>Mån-Fre: 11-21</a></li>
+          <li><a>Lör-Sön: 12-21</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Följ oss på sociala medier</h2>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/pizzeriaangelafinspang"
+            target="_blank"
+            ><ion-icon size="large" name="logo-facebook"></ion-icon></a
+          >
+        </div>
+      </div>
+      <div class="footer-col">
+        <Image src={Logo} alt="Pizzeria & Restaurang Angela" />
+        <p>
+          <span>&amp; 2023 All rights reserved {" "}</span>
+          <span>By: Sevak Yousef</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    background-color: #24262b;
+    padding: 42px 0;
+  }
+
+  footer img {
+    height: 90px;
+    width: 100%;
+  }
+
+  .footer-row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .footer-col {
+    padding: 0 15px;
+  }
+
+  .footer-col h2 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .footer-col h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--medium-green);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+  }
+
+  .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #777;
+    transition: all 0.5s ease;
+  }
+
+  .footer-col .social-links a:hover {
+    color: #fff;
+  }
+
+  .open-hours {
+    padding: 0.2;
+    line-height: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer-row {
+      flex-direction: column;
+    }
+  }
+</style>

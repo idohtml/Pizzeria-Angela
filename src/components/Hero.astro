@@ -1,0 +1,89 @@
+---
+
+---
+
+<header class="header">
+  <div class="text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary-main">Pizzeria</span>
+      <span class="heading-primary-sub">Angela</span>
+    </h1>
+    <a class="btn btn-white btn-animated" href="/" id="menu">Se meny</a>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(55, 55, 55, 0.3),
+        rgba(0, 0, 0, 0.8)
+      ),
+      url(/images/pizza1.jpg);
+    background-size: cover;
+    background-position: top;
+    overflow-x: hidden;
+  }
+
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+  }
+
+  .heading-primary {
+    color: #6dbf46;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+  }
+
+  .heading-primary-main {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 24px;
+    -webkit-animation-name: moveInRight;
+    animation-name: moveInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  .heading-primary-sub {
+    display: block;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 26px;
+    -webkit-animation-name: moveInLeft;
+    animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  @media screen and (max-width: 768px) {
+    .text-box {
+      padding: 2rem;
+    }
+
+    .heading-primary-main {
+      font-size: 24px;
+      letter-spacing: 16px;
+    }
+
+    .heading-primary-sub {
+      font-size: 48px;
+      letter-spacing: 18px;
+    }
+  }
+</style>

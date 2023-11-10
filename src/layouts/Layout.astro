@@ -1,0 +1,458 @@
+---
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>{title}</title>
+  </head>
+  <body>
+    <Hero />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<script>
+  let element = document.getElementById("menu");
+  let element2 = document.getElementById("btnScroll");
+
+  element.addEventListener("click", navigateTo, true);
+
+  function navigateTo(event) {
+    event.preventDefault();
+    element2.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  }
+
+  const menuItems = {
+    groups: [
+      { id: "grupp1", price: "110kr" },
+      { id: "grupp2", price: "120kr" },
+      { id: "grupp3", price: "125kr" },
+      { id: "grupp4", price: "135kr" },
+      { id: "grupp5", price: "145kr" },
+    ],
+    kebabMenu: [
+      { id: "KebabMedBröd", price: "110kr" },
+      { id: "KebabTallrik", price: "110kr" },
+      { id: "HawaiiTallrik", price: "120kr" },
+      { id: "Grekisktallrik", price: "120kr" },
+      { id: "Iskanderrulle", price: "120kr" },
+      { id: "Kycklingrulle", price: "120kr" },
+      { id: "Kycklingkebabtallrik", price: "120kr" },
+      { id: "Kycklingkebabbröd", price: "120kr" },
+      { id: "Gyrostallrik", price: "125kr" },
+      { id: "Falafeltallrik", price: "110kr" },
+    ],
+    aLaCarteMenu: [
+      { id: "Lövstek", price: "120kr" },
+      { id: "Schnitzel", price: "120kr" },
+      { id: "Pannbiff", price: "125kr" },
+      { id: "Rödspätta", price: "125kr" },
+      { id: "Kycklingfilé", price: "125kr" },
+      { id: "Fläskfilé", price: "139kr" },
+      { id: "Kycklingspett", price: "135kr" },
+      { id: "Pyttipanna", price: "120kr" },
+      { id: "Raggmunk", price: "125kr" },
+      { id: "Lasagne", price: "130kr" },
+      { id: "Bolognese", price: "110kr" },
+      { id: "90g", price: "99kr" },
+      { id: "150g", price: "110kr" },
+      { id: "PaellaKyckling", price: "125kr" },
+      { id: "PaellaKebab", price: "125kr" },
+      { id: "PaellaMix", price: "125kr" },
+    ],
+    saladsMenu: [
+      { id: "Sallader", price: "115kr " },
+      { id: "KycklingSpecial", price: "129kr" },
+      { id: "NaddasSpecial", price: "129kr" },
+      { id: "Barnmeny", price: "89kr" },
+    ],
+  };
+
+  for (const key in menuItems) {
+    const group = menuItems[key];
+    group.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) {
+        element.innerHTML = item.price;
+      }
+    });
+  }
+</script>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+  :root {
+    --light-green: #7ed56f;
+    --medium-green: #55c57a;
+    --dark-green: #28b485;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    color: #777;
+    line-height: 1.7;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5em;
+  }
+
+  .btn:link,
+  .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-white {
+    background-color: #fff;
+    color: #777;
+  }
+
+  .btn-black {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  .btn-white::after {
+    background-color: #fff;
+  }
+
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  .btn-animated {
+    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+  }
+
+  .grid {
+    top: 100px;
+    padding: 50px;
+    display: grid;
+    width: 120em;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+  }
+
+  .grid-item {
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-group-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: 700;
+  }
+
+  .menu-group-heading span:first-child {
+    font-size: 2rem;
+  }
+
+  .menu-group-description {
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 2px solid var(--light-green);
+    color: #999;
+    font-size: 1rem;
+    padding-bottom: 1em;
+    text-align: left;
+  }
+
+  .menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+  }
+
+  .menu-item {
+    display: flex;
+  }
+
+  .menu-item-text {
+    flex-grow: 1;
+  }
+
+  .menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .menu-item-name {
+    font-weight: 700;
+    margin-right: 1.5em;
+  }
+
+  .menu-item-description {
+    line-height: 1.6;
+  }
+  /* MEDIA QUERIES */
+
+  @media (max-width: 1280px) {
+    .logo {
+      height: 60px;
+    }
+
+    .logo-box {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2em;
+    }
+
+    .grid-item {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+    .footer-col {
+      width: 100%;
+    }
+
+    .btn-black:link {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .grid {
+      grid-gap: 3rem;
+    }
+
+    .menu-group {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item-image {
+      width: 125px;
+      height: 125px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .menu-group-heading {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-group-heading span:first-child {
+      font-size: 2.5rem;
+    }
+
+    .menu-group-description {
+      text-align: center;
+    }
+
+    .footer-col {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .heading-primary-main,
+    .heading-primary-sub {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .footer-row {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  /* KEYFRAMES */
+
+  @-webkit-keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @-webkit-keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @-webkit-keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
