@@ -19,7 +19,7 @@ import { menuGroups } from "../data/menu";
         <section class="menu">
           <h2 class="menu-group-heading" id={group.id}>
             <span>{group.name}</span>
-            {group.priceSpanId && <span id={group.priceSpanId}></span>}
+            {group.price && <span class="group-price">{group.price}</span>}
           </h2>
           {group.description && (
             <p class="menu-group-description" set:html={group.description} />
@@ -30,11 +30,8 @@ import { menuGroups } from "../data/menu";
                 <div class="menu-item-text">
                   <h3 class="menu-item-heading">
                     <span class="menu-item-name" set:html={item.name} />
-                    <span 
-                      class="menu-item-price" 
-                      id={item.priceId || undefined}
-                    >
-                      {item.priceLabel || ""}
+                    <span class="menu-item-price">
+                      {item.price || ""}
                     </span>
                   </h3>
                   {item.description && (
