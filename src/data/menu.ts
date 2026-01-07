@@ -91,10 +91,6 @@ export const menuGroups: MenuGroup[] = [
         description: "Gorgonzola, tomat, paprika, champinjoner, purjolök",
       },
       {
-        name: "Vesuvio special",
-        description: "Lufttorkad skinka, mozzarella, ruccola",
-      },
-      {
         name: "Mexicana",
         description: "Skinka, köttfärs, paprika, jalapeño, tabasco",
       },
@@ -110,6 +106,10 @@ export const menuGroups: MenuGroup[] = [
     description: "Tomatsås & ost ingår i alla pizzor",
     price: "149kr",
     items: [
+      {
+        name: "Vesuvio special",
+        description: "Lufttorkad skinka, mozzarella, ruccola",
+      },
       { name: "Gyrospizza", description: "Gyros, lök, champinjoner, mild sås" },
       {
         name: "Kycklingkebabpizza",
