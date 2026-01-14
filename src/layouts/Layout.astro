@@ -1,6 +1,6 @@
 ---
-import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
 
 interface Props {
   title: string;
@@ -34,73 +34,17 @@ const { title } = Astro.props;
 </html>
 
 <script>
-  let element = document.getElementById("menu");
-  let element2 = document.getElementById("btnScroll");
+  const menuButton = document.getElementById("menu");
+  const scrollTarget = document.getElementById("btnScroll");
 
-  element.addEventListener("click", navigateTo, true);
-
-  function navigateTo(event) {
-    event.preventDefault();
-    element2.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  }
-
-  const menuItems = {
-    groups: [
-      { id: "grupp1", price: "115kr" },
-      { id: "grupp2", price: "125kr" },
-      { id: "grupp3", price: "135kr" },
-      { id: "grupp4", price: "145kr" },
-      { id: "grupp5", price: "155kr" },
-    ],
-    kebabMenu: [
-      { id: "KebabMedBröd", price: "119kr" },
-      { id: "KebabTallrik", price: "119kr" },
-      { id: "HawaiiTallrik", price: "129kr" },
-      { id: "Grekisktallrik", price: "129kr" },
-      { id: "Iskanderrulle", price: "129kr" },
-      { id: "Kycklingrulle", price: "129kr" },
-      { id: "Kycklingkebabtallrik", price: "129kr" },
-      { id: "Kycklingkebabbröd", price: "129kr" },
-      { id: "Gyrostallrik", price: "129kr" },
-      { id: "Falafeltallrik", price: "115kr" },
-    ],
-    aLaCarteMenu: [
-      { id: "Lövstek", price: "129kr" },
-      { id: "Schnitzel", price: "129kr" },
-      { id: "Pannbiff", price: "129kr" },
-      { id: "Rödspätta", price: "129kr" },
-      { id: "Kycklingfilé", price: "129kr" },
-      { id: "Fläskfilé", price: "149kr" },
-      { id: "Kycklingspett", price: "139kr" },
-      { id: "Pyttipanna", price: "129kr" },
-      { id: "Raggmunk", price: "129kr" },
-      { id: "Lasagne", price: "145kr" },
-      { id: "Bolognese", price: "129kr" },
-      { id: "90g", price: "105kr" },
-      { id: "150g", price: "115kr" },
-      { id: "PaellaKyckling", price: "135kr" },
-      { id: "PaellaKebab", price: "135kr" },
-      { id: "PaellaMix", price: "135kr" },
-    ],
-    saladsMenu: [
-      { id: "Sallader", price: "120kr " },
-      { id: "KycklingSpecial", price: "135kr" },
-      { id: "NaddasSpecial", price: "135kr" },
-      { id: "Barnmeny", price: "89kr" },
-    ],
-  };
-
-  for (const key in menuItems) {
-    const group = menuItems[key];
-    group.forEach((item) => {
-      const element = document.getElementById(item.id);
-      if (element) {
-        element.innerHTML = item.price;
-      }
+  if (menuButton && scrollTarget) {
+    menuButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      scrollTarget.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
     });
   }
 </script>
