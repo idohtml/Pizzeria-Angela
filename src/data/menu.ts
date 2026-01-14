@@ -356,12 +356,12 @@ export const menuGroups: MenuGroup[] = [
       {
         name: "Kycklingkebabsallad",
         description: "Kycklingkebab, rödlök, feferoni",
-        price: "+9kr",
+        price: "+10kr",
       },
       {
         name: "Gyrossallad",
         description: "Gyroskött, rödlök, feferoni",
-        price: "+9kr",
+        price: "+10kr",
       },
     ],
   },
