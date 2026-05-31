@@ -17,7 +17,7 @@ export const menuGroups: MenuGroup[] = [
     id: "btnScroll",
     name: "Grupp 1",
     description: "Tomatsås & ost ingår i alla pizzor",
-    price: "119kr",
+    price: "125kr",
     items: [
       { name: "Margherita" },
       { name: "Vesuvio", description: "Skinka" },
@@ -205,12 +205,12 @@ export const menuGroups: MenuGroup[] = [
       {
         name: "Kebab med bröd",
         description: "Nötkött, sallad, rödlök, tomat, feferoni, stark sås",
-        price: "125kr",
+        price: "129kr",
       },
       {
         name: "Kebabtallrik / Rulle",
         description: "Nötkött, sallad, rödlök, feferoni, stark sås",
-        price: "125kr",
+        price: "129kr",
       },
       {
         name: "Hawaiitallrik / Rulle / Bröd",

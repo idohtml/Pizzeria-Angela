@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+import Allergies from "../../public/images/allergies.jpg";
+import { menuGroups } from "../data/menu";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Pizzeria & Restaurang Angela | Finspång">
+  <main>
+    <div class="container">
+      <section class="menu">
+        <div class="allergies">
+          <Image src={Allergies} alt="Allergies" class="allergies" />
+          <h2 class="allergies-heading">Vid allergier fråga personalen</h2>
+        </div>
+      </section>
+
+      {menuGroups.map((group) => (
+        <section class="menu">
+          <h2 class="menu-group-heading" id={group.id}>
+            <span>{group.name}</span>
+            {group.price && <span class="group-price">{group.price}</span>}
+          </h2>
+          {group.description && (
+            <p class="menu-group-description" set:html={group.description} />
+          )}
+          <div class="menu-group">
+            {group.items.map((item) => (
+              <div class="menu-item">
+                <div class="menu-item-text">
+                  <h3 class="menu-item-heading">
+                    <span class="menu-item-name" set:html={item.name} />
+                    <span class="menu-item-price">
+                      {item.price || ""}
+                    </span>
+                  </h3>
+                  {item.description && (
+                    <p class="menu-item-description" set:html={item.description} />
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .allergies {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .allergies img {
+    filter: brightness(0.6);
+  }
+
+  .allergies-heading {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    color: #f6f6f6;
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .allergies {
+      height: 100px;
+    }
+
+    .allergies-heading {
+      font-size: 1.2rem;
+    }
+  }
+</style>
